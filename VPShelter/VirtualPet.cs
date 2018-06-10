@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace VPShelter
 {
     class VirtualPet
-    {// declare fields
+    { 
+        //declare fields
         private int hunger;
         private int thirst;
         private int waste;
@@ -15,7 +16,16 @@ namespace VPShelter
         private bool hungerAlert;
         private bool thirstAlert;
         private bool wasteAlert;
+        private string description;
+        
+
+
         //declare properties
+        public string Description
+        {
+            get { return this.description; }
+            set { this.description = value; }
+        }
         public bool HungerAlert
         {
             get { return this.hungerAlert; }

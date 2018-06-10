@@ -29,23 +29,68 @@ namespace VPShelter
 
                 if (userResponse == 1)
                 {
+                    Manager manager = new Manager(5, false);
                     Console.WriteLine("Thank you for being a great manager, do you want to:");
                     Console.WriteLine("Select 1 to feed the pets.");
                     Console.WriteLine("Select 2 to play with the pets.");
                     Console.WriteLine("Select 3 to pay the bills.");
+                    Console.WriteLine("Select 4 to view status of the pet.");
+                    Console.WriteLine("Select 5 to adaopt a pet.");
                     userResponse = int.Parse(Console.ReadLine());
                     Console.Clear();
 
+                    //Creating Logic switch statment for manager doin thier 4 tasks
+                    switch (userResponse)
+                    {
+                        case 1:
+                                manager.Feed();
+                            break;
+                        case 2:
+                                manager.Play();
+                            break;
+                        case 3:
+                                manager.PayBills();
+                            break;
+                        case 4:
+                            manager.ViewStatus();
+                            break;
+                                case 5:
+                            manager.AdoptAPet();
+                            break;
+                        default:
+                            Console.WriteLine("Thanks you for managing Semus Hobans Pet Store");
+                            break;
+                    }
+                    
+
                 }
                 else if (userResponse == 2)
-                {
+                { 
+                    Volunteer volunteer = new Volunteer();
                     Console.WriteLine("Thank you for being a most needed volunteer, do you want to:");
                     Console.WriteLine("Select 1 to feed the pets.");
                     Console.WriteLine("Select 2 to play with the pets.");
                     Console.WriteLine("Select 3 to give water to the pets.");
                     userResponse = int.Parse(Console.ReadLine());
                     Console.Clear();
+
+                //Creating logic for volunteer to do thier 3 tasks
+                switch (userResponse)
+                {
+                    case 1:
+                            volunteer.Feed();
+                        break;
+                    case 2:
+                            volunteer.Play();
+                        break;
+                    case 3:
+                            volunteer.Water();
+                        break;
+                    default:
+                            Console.WriteLine("Thankyou for volunteering at Seamus Hobans Pet Shop");
+                        break;
                 }
+            }
                 else if (userResponse == 3)
                 {
                     Console.WriteLine("Thank you for coming to Seamus Hobans Pet Shop.");

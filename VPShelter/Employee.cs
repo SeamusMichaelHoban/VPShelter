@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    abstract class Employee
+    public abstract class Employee
     {
         //field/prop for employee class
         public int allPetsHungerLevel;
@@ -24,10 +24,11 @@ namespace VPShelter
         //Create 2 abstract methods
         public abstract void Feed();
 
-
-        public abstract void Play();
-
         public abstract void ViewStatus();
+        public abstract void Play();
+        
+
+        
         
 
 

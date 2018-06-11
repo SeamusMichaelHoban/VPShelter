@@ -6,66 +6,93 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    class PetDetails : VirtualPet
+    public class PetDetails : VirtualPet
     {
         //Create fields/properties for different Pets
-        private string dog;
+        private string petType;
 
-        public string Dog
+        public  string PetType
         {
-            get { return this.dog; }
-            set { this.dog = value; }
+            get { return this.petType; }
+            set { this.petType = value; }
         }
-        private string cat;
 
-        public string Cat
-        {
-            get { return this.Cat; }
-            set { this.cat = value; }
-        }
-        private string snake;
+        private string petDiet;
 
-        public string Snake
+        public string PetDiet
         {
-            get { return this.Snake; }
-            set { this.snake = value; }
+            get { return this.petDiet; }
+            set { this.petDiet = value; }
         }
-        private string horse;
+        
+        //Constructor 
+        public PetDetails(string petType, string petDiet, string name, int hunger, int thirst, int waste)
+        {
+            this.PetType = petType;
+            this.PetDiet = petDiet;
+            this.Name = name;
+            this.Hunger = hunger;
+            this.Thirst = thirst;
+            this.Waste = waste;
+        }
 
-        public string Horse
-        {
-            get { return this.horse; }
-            set { this.horse = value; }
-        }
-        //Create fields properties for diet
-        private string dogFood;
+        //private string dog;
 
-        public string DogFood
-        {
-            get { return this.dogFood; }
-            set { this.dogFood = value; }
-        }
-        private string catfood;
+        //public string Dog
+        //{
+        //    get { return this.dog; }
+        //    set { this.dog = value; }
+        //}
+        //private string cat;
 
-        public string Catfood
-        {
-            get { return this.catfood; }
-            set { this.catfood = value; }
-        }
-        private string snakeFood;
+        //public string Cat
+        //{
+        //    get { return this.Cat; }
+        //    set { this.cat = value; }
+        //}
+        //private string snake;
 
-        public string SnakeFood
-        {
-            get { return this.snakeFood; }
-            set { this.snakeFood = value; }
-        }
-        private string horseFood;
+        //public string Snake
+        //{
+        //    get { return this.Snake; }
+        //    set { this.snake = value; }
+        //}
+        //private string horse;
 
-        public string HorseFood
-        {
-            get { return this.horseFood; }
-            set { this.horseFood = value; }
-        }
+        //public string Horse
+        //{
+        //    get { return this.horse; }
+        //    set { this.horse = value; }
+        //}
+        ////Create fields properties for diet
+        //private string dogFood;
+
+        //public string DogFood
+        //{
+        //    get { return this.dogFood; }
+        //    set { this.dogFood = value; }
+        //}
+        //private string catfood;
+
+        //public string Catfood
+        //{
+        //    get { return this.catfood; }
+        //    set { this.catfood = value; }
+        //}
+        //private string snakeFood;
+
+        //public string SnakeFood
+        //{
+        //    get { return this.snakeFood; }
+        //    set { this.snakeFood = value; }
+        //}
+        //private string horseFood;
+
+        //public string HorseFood
+        //{
+        //    get { return this.horseFood; }
+        //    set { this.horseFood = value; }
+        //}
 
 
 

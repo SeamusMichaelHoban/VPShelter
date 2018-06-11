@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    class VirtualPetShelter
+    public class VirtualPetShelter
     {
 
         //fileds and properties for storing all pets and employees
@@ -25,7 +25,9 @@ namespace VPShelter
             get { return this.numPets; }
             set { this.numPets = value; }
         }
-
+        //Creating lists
+        List<PetDetails> petNames = new List<PetDetails>();
+        List<Employee> employeeNames = new List<Employee>();
 
 
 

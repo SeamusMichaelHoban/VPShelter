@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VPShelter
 {
-    class VirtualPet
+    public class VirtualPet
     { 
         //declare fields
         private int hunger;
@@ -77,6 +77,12 @@ namespace VPShelter
             this.Thirst = thirst;
             this.Waste = waste;
         }
+        public VirtualPet(string name, string petType)
+        {
+            this.Name = name;
+            this.Description = description;
+        }
+
         //Create Methods
         public int SetHunger(int num)
         {

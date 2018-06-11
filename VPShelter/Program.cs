@@ -15,6 +15,26 @@ namespace VPShelter
             int userResponse;
             string exitExistingMenu = "no";
 
+            //instantiate objects from PetDetails
+            PetDetails dog = new PetDetails("Dog", "Dog Food", "Nuno", 25, 5, 7);
+            PetDetails cat = new PetDetails("Cat", "Cat Food", "Lucy", 22, 4, 9);
+            PetDetails bird = new PetDetails("Bird", "Bird Food", "Tweety", 20, 3, 6);
+            PetDetails turtle = new PetDetails("Turtle", "Turtle Food", "Maverick", 24, 6, 5);
+
+            Manager Manager1 = new Manager(0, true);
+            Volunteer Volunteer1 = new Volunteer();
+
+            Manager1.Dog = dog;
+            Manager1.Cat = cat;
+            Manager1.Bird = bird;
+            Manager1.Turtle = turtle;
+
+            Volunteer1.Dog = dog;
+            Volunteer1.Cat = cat;
+            Volunteer1.Bird = bird;
+            Volunteer1.Turtle = turtle;
+
+
             //While loop for main menu
             Console.WriteLine("Welcome to the Seamus Hobans Pet Shop");
             while (exitMainMenu.Equals("no"))
@@ -46,16 +66,16 @@ namespace VPShelter
                                 manager.Feed();
                             break;
                         case 2:
-                                manager.Play();
+                                Manager1.Play();
                             break;
                         case 3:
                                 manager.PayBills();
                             break;
                         case 4:
-                            manager.ViewStatus();
+                            Manager1.ViewStatus();
                             break;
                                 case 5:
-                            manager.AdoptAPet();
+                            Manager1.AdoptAPet();
                             break;
                         default:
                             Console.WriteLine("Thanks you for managing Semus Hobans Pet Store");
@@ -71,6 +91,7 @@ namespace VPShelter
                     Console.WriteLine("Select 1 to feed the pets.");
                     Console.WriteLine("Select 2 to play with the pets.");
                     Console.WriteLine("Select 3 to give water to the pets.");
+                    Console.WriteLine("Select 4 to view status of the pets.");
                     userResponse = int.Parse(Console.ReadLine());
                     Console.Clear();
 
@@ -81,12 +102,15 @@ namespace VPShelter
                             volunteer.Feed();
                         break;
                     case 2:
-                            volunteer.Play();
+                            Volunteer1.Play();
                         break;
                     case 3:
                             volunteer.Water();
                         break;
-                    default:
+                        case 4:
+                            Volunteer1.ViewStatus();
+                            break;
+                        default:
                             Console.WriteLine("Thankyou for volunteering at Seamus Hobans Pet Shop");
                         break;
                 }
